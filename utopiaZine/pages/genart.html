@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generative Art for Netscape 2.02</title>
+</head>
+
+<body>
+
+
+
+    <FORM NAME="form1">
+        <h1>Boolean Poetry Generator!</h1>
+        <I>by deuspoeticus</I>
+        <hr>
+        <B>Clicking on the button will randomly generate 8 bytes, corresponding to<BR>
+            64 bits worth of data in total. An LSG algorithm is used for PRNG.<BR>
+                HTML checkboxes function as a primitive screen with 8x8 resolution.
+        
+        </B>
+        <BR>
+        <BR>
+        <INPUT TYPE="button" NAME="submit" VALUE="Generate Magic" onClick="generate()">
+
+        <hr>
+
+        <BR><INPUT NAME="box1" TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+        <INPUT TYPE="checkbox">
+
+        <BR><INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+            <INPUT TYPE="checkbox">
+
+        <hr>
+
+        <BR><INPUT TYPE="text" VALUE=""
+            SIZE="8">
+            <BR><INPUT TYPE="text" VALUE=""
+                SIZE="8">
+                <BR><INPUT TYPE="text" VALUE=""
+                    SIZE="8">
+                    <BR><INPUT TYPE="text" VALUE=""
+                        SIZE="8">
+                        <BR><INPUT TYPE="text" VALUE=""
+                            SIZE="8">
+                            <BR><INPUT TYPE="text" VALUE=""
+                                SIZE="8">
+                                <BR><INPUT TYPE="text" VALUE=""
+                                    SIZE="8">
+                                    <BR><INPUT TYPE="text" VALUE=""
+                                        SIZE="8">
+
+    </FORM>
+
+    <script>
+
+        // Linear Congruential Generator (LCG) parameters
+        var m = 4294967296;   // modulus
+        var a = 1664525;      // multiplier
+        var c = 1013904223;   // increment
+
+        var seed = 1;
+        var state = seed % m;
+
+        function nextRandom() {
+            state = (a * state + c) % m;
+            return state / m;
+        }
+
+        function generate() {
+
+            document.form1.elements[65].value = "";
+            document.form1.elements[66].value = "";
+            document.form1.elements[67].value = "";
+            document.form1.elements[68].value = "";
+            document.form1.elements[69].value = "";
+            document.form1.elements[70].value = "";
+            document.form1.elements[71].value = "";
+            document.form1.elements[72].value = "";
+
+            var binaryOutput = "";
+
+            for (y = 0; y < 8; y++) {
+                for (i = 0; i < 8; i++) {
+
+            
+
+            var bit = Math.floor(nextRandom() * 2); // Generate random 0 or 1
+            
+            document.form1.elements[65 + (y)].value += bit;
+            binaryOutput += bit;
+
+            }
+            
+
+            }
+
+                for (x = 0; x < 64; x++) {
+
+                        var newBoolean = false;
+                        
+                        if (binaryOutput.charAt(x) == "1") {
+                            newBoolean = true;
+                           
+                        } 
+
+                        document.form1.elements[1+x].checked = newBoolean;
+            
+                }
+
+
+
+            
+    }
+
+    </script>
+
+</body>
+</html>
