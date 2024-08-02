@@ -4,6 +4,35 @@
   <title>aW Marketplace</title>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  <script>
+    function DateTime() {
+      const now = new Date();
+      const currentDateTime = now.toLocaleString();
+      document.querySelector('#datetime').textContent = currentDateTime;
+    }
+    setInterval(DateTime, 1000);
+
+    function toggleEmbedIframe() {
+      const container = document.getElementById('embed-container');
+      const currentElement = container.firstElementChild;
+      
+      if (currentElement.tagName.toLowerCase() === 'embed') {
+        const iframe = document.createElement('iframe');
+        iframe.src = "https://aetherworks.xyz";
+        iframe.style.width = '740px';
+        iframe.style.height = '750px';
+        container.replaceChild(iframe, currentElement);
+      } else {
+        const embed = document.createElement('embed');
+        embed.src = "/utopiaZine/zine.html";
+        embed.style.width = '740px';
+        embed.style.height = '750px';
+        container.replaceChild(embed, currentElement);
+      }
+    }
+  </script>
+</head>
+<body style="background-color:#c3c3c3;">
   <div class="window" style="width: auto; margin:auto ">
     <div class="title-bar">
       <div class="title-bar-text">aetherWorks Marketplace</div>
@@ -12,83 +41,52 @@
         <button aria-label="Maximize"></button>
         <button aria-label="Close"></button>
       </div>
-    </div> 
+    </div>
     
     <div class="window-body">
-  <p> a marketpace for true sysAdmins such as:</p>
-  <ul>
-      <li>srodan</li>
-      <li>emulator enjoyers</li>
-      <li>retro lovoors</li>
-  </ul>
+      <p>a marketpace for true sysAdmins such as:</p>
+      <ul>
+        <li>srodan</li>
+        <li>emulator enjoyers</li>
+        <li>retro lovoors</li>
+      </ul>
     </div>
     <div class="status-bar">
       <p class="status-bar-field">Press F1 for help</p>
-      <p class="status-bar-field"><marquee direction="left" scrollamount="20" behavior="alternate" >GOD IS MATHEMATICS </marquee> <marquee direction="left" scrollamount="-20" behavior="alternate" >GOD IS GOOD </marquee> <style>
-        .blink {
-            animation: blinker 1.5s linear infinite;
-            color: red;
-        }
-
-        @keyframes blinker {
-            50% {
-                opacity: 0;
-            }
-        }
-    </style></p>
-      <p class="status-bar-field">today is: 
-        <span id="datetime"></span>
-    
-        <script>
-          function DateTime() {
-            const now = new Date();
-            const currentDateTime = now.toLocaleString();
-            document.querySelector('#datetime').textContent = currentDateTime;
-          }
-          setInterval( DateTime, 1000);
-        </script></p>
+      <p class="status-bar-field"><p class="status-bar-field"><marquee direction="left" scrollamount="20" behavior="alternate" >GOD IS MATHEMATICS </marquee> <marquee direction="right" scrollamount="20" behavior="alternate" >GOD IS GOOD </marquee></p>
+      <p class="status-bar-field">today is: <span id="datetime"></span></p>
     </div>
   </div>
-</head>
 
-<body style="background-color:#c3c3c3;">
-    <div title="threewindow" style="margin: 50px; width: auto;">
+  <div title="threewindow" style="margin: 50px; width: auto;">
     <div class="window" style="margin: 32px; width: 250px; float:left">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            sysAdmin:True
-          </div>
-        </div>
-        <div class="window-body">
-          <p><b>Welcome to aetherWorks Marketplace!</b></p>
-        </div>
-      <div></div>
-      </div> 
-      <div class="window" style="margin: 32px; width: 750px ; float:left">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            sysAdmin:True
-          </div>
-        </div>
-        <div class="window-body">
-          <p><b>utopiaZine</b></p>
+      <div class="title-bar">
+        <div class="title-bar-text">sysAdmin:True</div>
+      </div>
+      <div class="window-body">
+        <p><b>Welcome to aetherWorks Marketplace!</b></p>
+      </div>
+    </div> 
+    <div class="window" style="margin: 32px; width: 750px ; float:left">
+      <div class="title-bar">
+        <div class="title-bar-text">sysAdmin:True</div>
+      </div>
+      <div class="window-body">
+        <p><b>utopiaZine</b></p>
+        <div id="embed-container">
           <embed src="/utopiaZine/zine.html" style="width: 740px;height: 750px;">
         </div>
-      <div></div>
-      
+        <button onclick="toggleEmbedIframe()">Toggle Embed/Iframe</button>
+      </div>
     </div> 
     <div class="window" style="margin: 32px; width: 250px ; float: left">
-        <div class="title-bar">
-          <div class="title-bar-text">
-            sysAdmin:True
-          </div>
-        </div>
-        <div class="window-body">
-          <p><b>Connect Wallet</b></p>
-        </div>
-      <div></div>
+      <div class="title-bar">
+        <div class="title-bar-text">sysAdmin:True</div>
+      </div>
+      <div class="window-body">
+        <p><b>Connect Wallet</b></p>
       </div>
     </div>
-</div>
-    </body>
+  </div>
+</body>
 </html>
