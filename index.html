@@ -19,13 +19,13 @@
       if (currentElement.tagName.toLowerCase() === 'embed') {
         const iframe = document.createElement('iframe');
         iframe.src = "https://aetherworks.xyz";
-        iframe.style.width = '740px';
+        iframe.style.width = '1200px';
         iframe.style.height = '750px';
         container.replaceChild(iframe, currentElement);
       } else {
         const embed = document.createElement('embed');
         embed.src = "/utopiaZine/zine.html";
-        embed.style.width = '740px';
+        embed.style.width = '1200px';
         embed.style.height = '750px';
         container.replaceChild(embed, currentElement);
       }
@@ -67,14 +67,14 @@
         <p><b>Welcome to aetherWorks Marketplace!</b></p>
       </div>
     </div> 
-    <div class="window" style="margin: 32px; width: 750px ; float:left">
+    <div class="window" style="margin: 32px; width: 1250px ; float:left">
       <div class="title-bar">
         <div class="title-bar-text">sysAdmin:True</div>
       </div>
       <div class="window-body">
         <p><b>utopiaZine</b></p>
         <div id="embed-container">
-          <embed src="/utopiaZine/zine.html" style="width: 740px;height: 750px;">
+          <embed src="/utopiaZine/zine.html" style="width: 1200px;height: 750px;">
         </div>
         <button onclick="toggleEmbedIframe()">Toggle Zine/Machine</button>
       </div>
