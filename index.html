@@ -2,8 +2,11 @@
 <html>
 <head>
   <title>aW Marketplace</title>
+  <script src="https://connect.manifoldxyz.dev/latest/connect.umd.min.js"></script>
+  <script src="https://claims.manifoldxyz.dev/1.11.0/claimComplete.umd.min.js"></script>
   <meta charset="UTF-8" />
   <link rel="stylesheet" href="https://unpkg.com/98.css" />
+  
   <script>
     function DateTime() {
       const now = new Date();
@@ -18,14 +21,14 @@
       
       if (currentElement.tagName.toLowerCase() === 'embed') {
         const iframe = document.createElement('iframe');
-        iframe.src = "https://aetherworks.xyz";
-        iframe.style.width = '1100px';
-        iframe.style.height = '750px';
+        iframe.src = "https://arweave.net/eWQuHM0WDzFzvgqcI4VH29opq3O3YXiXVE9matF3mMk";
+        iframe.style.width = '1200px';
+        iframe.style.height = '1200px';
         container.replaceChild(iframe, currentElement);
       } else {
         const embed = document.createElement('embed');
         embed.src = "/utopiaZine/zine.html";
-        embed.style.width = '1100px';
+        embed.style.width = '740px';
         embed.style.height = '750px';
         container.replaceChild(embed, currentElement);
       }
@@ -52,41 +55,83 @@
       </ul>
     </div>
     <div class="status-bar">
-      <p class="status-bar-field">Press F1 for help</p>
-      <p class="status-bar-field"><p class="status-bar-field"><marquee direction="left" scrollamount="20" behavior="alternate" >GOD IS MATHEMATICS </marquee> <marquee direction="right" scrollamount="20" behavior="alternate" >GOD IS GOOD </marquee></p>
-      <p class="status-bar-field">today is: <span id="datetime"></span></p>
+        <p class="status-bar-field">save your soul</p>
+        <p class="status-bar-field"> <marquee direction="right" scrollamount="20" behavior="alternate">GOD IS GOOD </marquee></p>
+        <p class="status-bar-field"><marquee direction="left" scrollamount="20" behavior="alternate">GOD IS MATHEMATICS </marquee> </p>
+        <p class="status-bar-field">today is: <span id="datetime">09.08.2024 00:20:06</span></p>
+      </div>
+  </div>
+<div style="margin: 50px; width: 850px; float:right;">
+    <i class="fa fa-paragraph" aria-hidden="true">thank you for choosing us, this is a passion project of mine. I created aetherWorks as i didn't see a beautiful way to use emulation in art. and I hope you'll like it too.</i>
+</div>
+<div class="window" style="width: 45pc; float :left; margin: 55px">
+    <div class="title-bar">
+      <div class="title-bar-text">aetherWorks Marketplace</div>
+      <div class="title-bar-controls">
+        <button aria-label="Minimize"></button>
+        <button aria-label="Maximize"></button>
+        <button aria-label="Close"></button>
+      </div>
+    </div>
+    
+    <div class="window-body">
+      <p>utopiaZine01</p>
+      <ul>
+        <li>mints</li>
+        <li>enjoyers</li>
+        <li>connecters</li>
+      </ul>
+    </div>
+    <div class="status-bar">
+        
+      <p class="status-bar-field"><div
+        data-widget="m-claim-mint-count"
+        data-id="3819753712" style="width: max-content;"
+      ></div></p>
+       <p class="status-bar-field"><div
+      data-widget="m-claim-buy-only"
+      data-id="3819753712" style="float: inline-start;"></div></p>
+      <p class="status-bar-field"><div  
+        data-widget="m-connect"
+        data-grant-type="signature"
+        data-client-id="b5dff156cdaecf1277741fb74ea04434a2691c7ff5f7575367d4ce937f1e8759"  
+        data-app-name="aW"  
+        data-network="11155111" style="float: inline-end; padding-right: 5px; text-align: center;"
+
+
+      > 
+      </div>
+
+      </p>
     </div>
   </div>
-
-  <div title="threewindow" style="margin: 50px; width: auto;">
-    <div class="window" style="margin: 32px; width: 250px; float:left">
+  <div title="threewindow" style="margin: 35px; width: auto; float:left ;"> 
+    <div class="window" style="margin: 32px; width: fit-content ; float:left">
       <div class="title-bar">
-        <div class="title-bar-text">sysAdmin:True</div>
+        <div class="title-bar-text">sysAdmin:False</div>
       </div>
-      <div class="window-body">
-        <p><b>Welcome to aetherWorks Marketplace!</b></p>
-      </div>
-    </div> 
-    <div class="window" style="margin: 32px; width: 1125px ; float:left">
-      <div class="title-bar">
-        <div class="title-bar-text">sysAdmin:True</div>
-      </div>
-      <div class="window-body">
+      <div class="window-body"  >
         <p><b>utopiaZine</b></p>
         <div id="embed-container">
-          <embed src="/utopiaZine/zine.html" style="width: 1100px;height: 750px;">
+          <embed src="/utopiaZine/zine.html" style="width: 750px;height: 770px;">
         </div>
-        <button onclick="toggleEmbedIframe()">Toggle Zine/Machine</button>
+        <button onclick="toggleEmbedIframe()">Toggle Zine/MACHINE</button><div  
+        data-widget="m-connect"
+        data-grant-type="signature"
+        data-client-id="b5dff156cdaecf1277741fb74ea04434a2691c7ff5f7575367d4ce937f1e8759"  
+        data-app-name="aW"  
+        data-network="11155111" style="float: inline-end; padding-right: 5px; text-align: center;"
+
+        
+
+        
+      > 
       </div>
-    </div> 
-    <div class="window" style="margin: 32px; width: 250px ; float: left">
-      <div class="title-bar">
-        <div class="title-bar-text">sysAdmin:True</div>
-      </div>
-      <div class="window-body">
-        <p><b>Connect Wallet</b></p>
-      </div>
+     
+  </div>
+  
     </div>
+  
   </div>
 </body>
 </html>
